@@ -1,6 +1,6 @@
 {
 	"name": "signal-compose",
-	"version": "0.0.0-development",
+	"version": "1.0.0",
 	"description": "Compose multiple AbortSignals with AND, OR, and timeout semantics",
 	"license": "MIT",
 	"repository": "mstuart/signal-compose",
