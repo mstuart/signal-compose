@@ -1,0 +1,44 @@
+{
+	"name": "signal-compose",
+	"version": "0.0.0-development",
+	"description": "Compose multiple AbortSignals with AND, OR, and timeout semantics",
+	"license": "MIT",
+	"repository": "mstuart/signal-compose",
+	"funding": "https://github.com/sponsors/mstuart",
+	"author": {
+		"name": "Mark Stuart",
+		"email": "mstuart@users.noreply.github.com",
+		"url": "https://github.com/mstuart"
+	},
+	"type": "module",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"abort",
+		"signal",
+		"compose",
+		"any",
+		"all",
+		"timeout",
+		"abortcontroller",
+		"combine"
+	],
+	"devDependencies": {
+		"ava": "^6",
+		"tsd": "^0.31",
+		"xo": "^0.60"
+	}
+}
