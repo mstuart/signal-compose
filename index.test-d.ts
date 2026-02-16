@@ -4,13 +4,13 @@ import {anySignal, allSignals, timeoutSignal} from './index.js';
 const controller1 = new AbortController();
 const controller2 = new AbortController();
 
-// anySignal
+// AnySignal
 expectType<AbortSignal>(anySignal([controller1.signal, controller2.signal]));
 
-// allSignals
+// AllSignals
 expectType<AbortSignal>(allSignals([controller1.signal, controller2.signal]));
 
-// timeoutSignal
+// TimeoutSignal
 expectType<AbortSignal>(timeoutSignal(controller1.signal, 5000));
 
 // Invalid usage

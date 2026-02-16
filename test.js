@@ -5,7 +5,7 @@ const delay = ms => new Promise(resolve => {
 	setTimeout(resolve, ms);
 });
 
-// anySignal tests
+// AnySignal tests
 
 test('anySignal aborts when first signal aborts', t => {
 	const controller1 = new AbortController();
@@ -83,7 +83,7 @@ test('anySignal preserves the abort reason', t => {
 	t.is(signal.reason.message, 'custom reason');
 });
 
-// allSignals tests
+// AllSignals tests
 
 test('allSignals does not abort when only one signal aborts', t => {
 	const controller1 = new AbortController();
@@ -175,7 +175,7 @@ test('allSignals with single signal', t => {
 	t.true(signal.aborted);
 });
 
-// timeoutSignal tests
+// TimeoutSignal tests
 
 test('timeoutSignal aborts on timeout', async t => {
 	const controller = new AbortController();
@@ -189,7 +189,7 @@ test('timeoutSignal aborts on timeout', async t => {
 	t.is(signal.reason.message, 'Timeout');
 });
 
-test('timeoutSignal aborts on signal before timeout', async t => {
+test('timeoutSignal aborts on signal before timeout', t => {
 	const controller = new AbortController();
 	const signal = timeoutSignal(controller.signal, 5000);
 
