@@ -1,7 +1,16 @@
-# signal-compose
+<div align="center">
+  <img src="docs/assets/logo.svg" alt="signal-compose — Compose multiple AbortSignals with AND, OR, and timeout semantics" width="720">
+</div>
 
-> Compose multiple AbortSignals with AND, OR, and timeout semantics
+<p align="center"><strong>Compose multiple AbortSignals with AND, OR, and timeout semantics</strong></p>
 
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://www.npmjs.com/package/signal-compose"><img src="https://img.shields.io/npm/v/signal-compose?label=npm" alt="npm"></a>
+  <img src="https://img.shields.io/badge/node-%E2%89%A520-339933.svg" alt="Node 20+">
+</p>
+
+---
 ## Install
 
 ```sh
