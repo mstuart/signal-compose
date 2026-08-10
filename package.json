@@ -1,47 +1,50 @@
 {
-	"name": "signal-compose",
-	"version": "1.0.0",
-	"description": "Compose multiple AbortSignals with AND, OR, and timeout semantics",
-	"license": "MIT",
-	"repository": "mstuart/signal-compose",
-	"funding": "https://github.com/sponsors/mstuart",
-	"author": {
-		"name": "Mark Stuart",
-		"email": "mstuart@users.noreply.github.com",
-		"url": "https://github.com/mstuart"
-	},
-	"type": "module",
-	"exports": {
-		"types": "./index.d.ts",
-		"default": "./index.js"
-	},
-	"sideEffects": false,
-	"engines": {
-		"node": ">=20"
-	},
-	"scripts": {
-		"test": "xo && ava && tsd"
-	},
-	"files": [
-		"index.js",
-		"index.d.ts"
-	],
-	"keywords": [
-		"abort",
-		"signal",
-		"compose",
-		"any",
-		"all",
-		"timeout",
-		"abortcontroller",
-		"combine"
-	],
-	"devDependencies": {
-		"ava": "^7",
-		"tsd": "^0.33",
-		"xo": "^1.2"
-	},
-	"overrides": {
-		"@eslint/plugin-kit": ">=0.3.4"
-	}
+  "name": "signal-compose",
+  "version": "1.0.0",
+  "description": "Compose multiple AbortSignals with AND, OR, and timeout semantics",
+  "keywords": [
+    "abort",
+    "signal",
+    "compose",
+    "any",
+    "all",
+    "timeout",
+    "abortcontroller",
+    "combine"
+  ],
+  "repository": "mstuart/signal-compose",
+  "funding": "https://github.com/sponsors/mstuart",
+  "license": "MIT",
+  "author": {
+    "name": "Mark Stuart",
+    "email": "mstuart@users.noreply.github.com",
+    "url": "https://github.com/mstuart"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "test": "ava && tsd"
+  },
+  "overrides": {
+    "@eslint/plugin-kit": ">=0.3.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.6",
+    "ava": "^7",
+    "tsd": "^0.33",
+    "ultracite": "7.10.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }
