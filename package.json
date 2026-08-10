@@ -20,7 +20,9 @@
 		"node": ">=20"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd"
+		"test": "ava && tsd",
+		"check": "ultracite check",
+		"fix": "ultracite fix"
 	},
 	"files": [
 		"index.js",
@@ -37,9 +39,10 @@
 		"combine"
 	],
 	"devDependencies": {
+		"@biomejs/biome": "2.5.6",
 		"ava": "^7",
 		"tsd": "^0.33",
-		"xo": "^1.2"
+		"ultracite": "7.10.2"
 	},
 	"overrides": {
 		"@eslint/plugin-kit": ">=0.3.4"
