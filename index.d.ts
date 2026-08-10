@@ -68,4 +68,7 @@ const signal = timeoutSignal(controller.signal, 5000);
 // Signal will abort after 5 seconds, or when controller.abort() is called.
 ```
 */
-export function timeoutSignal(signal: AbortSignal, milliseconds: number): AbortSignal;
+export function timeoutSignal(
+  signal: AbortSignal,
+  milliseconds: number
+): AbortSignal;
