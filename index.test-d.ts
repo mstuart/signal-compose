@@ -1,5 +1,5 @@
-import {expectType, expectError} from 'tsd';
-import {anySignal, allSignals, timeoutSignal} from './index.js';
+import { expectError, expectType } from "tsd";
+import { allSignals, anySignal, timeoutSignal } from "./index.js";
 
 const controller1 = new AbortController();
 const controller2 = new AbortController();
@@ -14,7 +14,7 @@ expectType<AbortSignal>(allSignals([controller1.signal, controller2.signal]));
 expectType<AbortSignal>(timeoutSignal(controller1.signal, 5000));
 
 // Invalid usage
-expectError(anySignal('not iterable'));
+expectError(anySignal("not iterable"));
 expectError(allSignals(123));
-expectError(timeoutSignal('not a signal', 5000));
-expectError(timeoutSignal(controller1.signal, 'not a number'));
+expectError(timeoutSignal("not a signal", 5000));
+expectError(timeoutSignal(controller1.signal, "not a number"));
