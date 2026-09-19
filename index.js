@@ -46,7 +46,7 @@ The reason will be the reason from the last signal to abort.
 @returns {AbortSignal} A signal that aborts when all input signals have aborted.
 */
 export function allSignals(signals) {
-  const signalArray = [...signals];
+  const signalArray = [...new Set(signals)];
 
   // If all are already aborted, abort immediately
   if (signalArray.every((signal) => signal.aborted)) {

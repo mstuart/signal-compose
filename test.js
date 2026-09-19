@@ -184,6 +184,16 @@ test("allSignals with single signal", (t) => {
   t.true(signal.aborted);
 });
 
+test("allSignals handles the same signal more than once", (t) => {
+  const controller = new AbortController();
+  const signal = allSignals([controller.signal, controller.signal]);
+
+  controller.abort(new Error("shared"));
+
+  t.true(signal.aborted);
+  t.is(signal.reason.message, "shared");
+});
+
 // TimeoutSignal tests
 
 test("timeoutSignal aborts on timeout", async (t) => {
