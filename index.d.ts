@@ -54,7 +54,7 @@ export function allSignals(signals: Iterable<AbortSignal>): AbortSignal;
 Create an `AbortSignal` that aborts when either the given signal aborts or the timeout expires, whichever comes first.
 
 @param signal - The signal to monitor.
-@param milliseconds - The timeout duration in milliseconds.
+@param milliseconds - A finite duration between 0 and 2147483647 milliseconds. Invalid durations throw RangeError.
 @returns A signal that aborts on signal or timeout.
 
 @example
