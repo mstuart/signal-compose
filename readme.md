@@ -74,7 +74,7 @@ The signal to monitor.
 
 Type: `number`
 
-The timeout duration in milliseconds.
+The timeout duration in milliseconds: a finite number between 0 and 2147483647. Invalid durations throw `RangeError`, including when the input signal is already aborted.
 
 ## Related
 

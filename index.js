@@ -98,6 +98,17 @@ Create an `AbortSignal` that aborts when either the given signal aborts or the t
 @returns {AbortSignal} A signal that aborts on signal or timeout.
 */
 export function timeoutSignal(signal, milliseconds) {
+  if (
+    typeof milliseconds !== "number" ||
+    !Number.isFinite(milliseconds) ||
+    milliseconds < 0 ||
+    milliseconds > 2_147_483_647
+  ) {
+    throw new RangeError(
+      "Expected milliseconds to be a finite number between 0 and 2147483647"
+    );
+  }
+
   if (signal.aborted) {
     return AbortSignal.abort(signal.reason);
   }
